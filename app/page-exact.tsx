@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { 
-  Shield, Building2, Laptop, Cog, Construction, Home,
+  Shield, Building2, Laptop, Cog, Construction, Home as HomeIcon,
   Clock, Users, Target, DollarSign, Lightbulb, CheckCircle2,
   TrendingUp, Award, Phone, Mail
 } from 'lucide-react';
@@ -42,7 +42,7 @@ export default function Home() {
       description: "PEC-certified civil, telecom, and HVAC infrastructure development."
     },
     {
-      icon: <Home className="w-12 h-12" />,
+      icon: <HomeIcon className="w-12 h-12" />,
       title: "Smart Security & Home Automation",
       description: "Cutting-edge systems for homes and businesses including smart surveillance, alarms, automation, and energy solutions."
     }

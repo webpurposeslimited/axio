@@ -29,9 +29,9 @@ export default function Header() {
           name: 'Procurement & Construction',
           href: '/procurement-construction',
           submenu: [
-            { name: 'Defense & Government Procurement', href: '/procurement-construction#defense-government' },
-            { name: 'Turnkey Procurement', href: '/procurement-construction#turnkey' },
-            { name: 'Technology Solutions & Indenting', href: '/procurement-construction#technology-solutions' },
+            { name: 'Defense & Government Procurement', href: '/defense-government-procurement' },
+            { name: 'Turnkey Procurement', href: '/turnkey-procurement' },
+            { name: 'Technology Solutions & Indenting', href: '/technology-solutions-indenting' },
           ]
         },
         {

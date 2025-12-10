@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
-import ClientLogos from '@/components/ClientLogos';
 import { ArrowRight, Shield, Zap, Target, Users, Award, CheckCircle2, TrendingUp, Sparkles } from 'lucide-react';
 
 export default function Home() {
@@ -79,16 +78,6 @@ export default function Home() {
               transition={{ duration: 0.8 }}
               className="space-y-8"
             >
-              {/* Badge */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 }}
-                className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg border border-primary-100"
-              >
-                <Sparkles className="w-4 h-4 text-primary" />
-                <span className="text-sm font-semibold text-primary">Trusted by 26+ Companies</span>
-              </motion.div>
               
               {/* Main Heading */}
               <motion.h1 
@@ -149,26 +138,6 @@ export default function Home() {
                 </a>
               </motion.div>
 
-              {/* Stats */}
-              <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.6 }}
-                className="grid grid-cols-3 gap-6 pt-8"
-              >
-                <div className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-primary">56+</div>
-                  <div className="text-sm text-gray-600 mt-1">Projects</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-accent">5+</div>
-                  <div className="text-sm text-gray-600 mt-1">Years</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-primary">100%</div>
-                  <div className="text-sm text-gray-600 mt-1">Satisfied</div>
-                </div>
-              </motion.div>
             </motion.div>
 
             {/* Right Image with Floating Cards */}
@@ -183,7 +152,7 @@ export default function Home() {
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="relative w-[500px] h-[500px] animate-float">
                     <Image
-                      src="https://i0.wp.com/xemoventures.com/wp-content/uploads/2025/04/%E2%80%94Pngtree%E2%80%943d-lock-icon-cyber-security_15523015-1.png?fit=720%2C720&ssl=1"
+                      src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=500&h=500&fit=crop"
                       alt="Security Icon"
                       fill
                       className="object-contain drop-shadow-2xl"
@@ -267,6 +236,38 @@ export default function Home() {
         </motion.div>
       </section>
 
+      {/* Our Vision */}
+      <section className="py-24 bg-gradient-to-b from-white to-primary-50">
+        <div className="container mx-auto px-4">
+          <motion.div {...fadeIn} className="text-center max-w-3xl mx-auto mb-16">
+            <span className="inline-block px-4 py-2 bg-accent-100 text-accent font-semibold rounded-full text-sm mb-4">
+              Our Vision
+            </span>
+            <h2 className="text-4xl md:text-5xl font-bold text-dark mb-6">
+              Shaping the Future of <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Procurement & Technology</span>
+            </h2>
+          </motion.div>
+
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              {...fadeIn}
+              className="bg-white/80 backdrop-blur-sm rounded-3xl p-12 shadow-xl border border-primary-100"
+            >
+              <div className="flex flex-col md:flex-row items-center gap-8">
+                <div className="w-24 h-24 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                  <Target className="w-12 h-12 text-white" />
+                </div>
+                <div className="text-center md:text-left">
+                  <p className="text-xl md:text-2xl text-gray-700 leading-relaxed">
+                    To be the leading partner in procurement and technology solutions, empowering organizations with innovative, secure, and sustainable solutions that drive growth and operational excellence across all sectors.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Industries We Serve */}
       <section className="py-24 bg-gradient-to-br from-primary-50 via-white to-accent-50">
         <div className="container mx-auto px-4">
@@ -314,13 +315,11 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {[
               { icon: Shield, title: 'Defense & Government Procurement', desc: 'Strategic sourcing, compliance assurance, and risk-managed acquisition for public sector institutions.', color: 'primary' },
               { icon: Target, title: 'Turnkey Procurement Solutions', desc: 'Fully managed procurement processes from planning to delivery.', color: 'accent' },
-              { icon: Zap, title: 'IT & Software Development', desc: 'Custom-built digital platforms, websites, apps, and enterprise systems tailored for scalability.', color: 'primary' },
-              { icon: TrendingUp, title: 'Technology Solutions & Indenting', desc: 'Global sourcing of specialized equipment with expert integration.', color: 'accent' },
-              { icon: Users, title: 'Construction & Infrastructure', desc: 'PEC-certified civil, telecom, and HVAC infrastructure development.', color: 'primary' },
+              { icon: TrendingUp, title: 'Technology Solutions & Indenting', desc: 'Global sourcing of specialized equipment with expert integration.', color: 'primary' },
               { icon: Award, title: 'Smart Security & Automation', desc: 'Cutting-edge systems including smart surveillance, alarms, automation, and energy solutions.', color: 'accent' }
             ].map((service, i) => {
               const Icon = service.icon;
@@ -391,114 +390,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-24 bg-gradient-to-br from-blue-600 via-blue-700 to-teal-500 text-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{
-            backgroundImage: 'radial-gradient(circle, white 2px, transparent 2px)',
-            backgroundSize: '50px 50px'
-          }}></div>
-        </div>
-
-        <div className="container mx-auto px-4 relative z-10">
-          <motion.div {...fadeIn} className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4">
-              Proudly Partnered With <span className="text-yellow-300">26+</span> Companies
-            </h2>
-            <p className="text-xl opacity-90">Delivering excellence across every project</p>
-          </motion.div>
-
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { value: '56+', label: 'Projects Completed', icon: CheckCircle2 },
-              { value: '5+', label: 'Years of Experience', icon: Award },
-              { value: '17', label: 'Team Members', icon: Users },
-              { value: '100%', label: 'Satisfied Customers', icon: Sparkles }
-            ].map((stat, i) => {
-              const Icon = stat.icon;
-              return (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, scale: 0.5 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
-                  className="text-center bg-white/10 backdrop-blur-sm rounded-3xl p-8 hover:bg-white/20 transition-all duration-300"
-                >
-                  <Icon className="w-12 h-12 mx-auto mb-4 opacity-80" />
-                  <div className="text-5xl md:text-6xl font-bold mb-2">{stat.value}</div>
-                  <div className="text-lg opacity-90">{stat.label}</div>
-                </motion.div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Track Record */}
-      <section className="py-24 bg-gradient-to-b from-background to-white">
-        <div className="container mx-auto px-4">
-          <motion.div {...fadeIn} className="text-center max-w-3xl mx-auto mb-16">
-            <span className="inline-block px-4 py-2 bg-accent-100 text-accent font-semibold rounded-full text-sm mb-4">
-              Track Record
-            </span>
-            <h2 className="text-4xl md:text-5xl font-bold text-dark mb-6">
-              Proven <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Success Stories</span>
-            </h2>
-            <p className="text-gray-600 text-lg">
-              Delivering successful projects across government, defense, and private sectors
-            </p>
-          </motion.div>
-
-          <div className="max-w-4xl mx-auto">
-            <div className="relative border-l-4 border-gradient-to-b from-primary to-accent pl-8 space-y-6">
-              {[
-                '8 x DP Level Procurement Projects in 4 Years',
-                'Induction of New Snow Search & Rescue System for Pakistan Army',
-                '4 x DP Level Contracts in Progress',
-                'Induction of 2 New Equipments in Pakistan Army',
-                'Implementation of SOS Emergency Response System in Bahria Town Islamabad',
-                'Implementation of Smart Security & Home Automation Solutions across Pakistan'
-              ].map((achievement, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, x: -30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
-                  className="relative"
-                >
-                  <div className={`absolute -left-[42px] w-10 h-10 bg-gradient-to-br ${i % 2 === 0 ? 'from-primary to-primary-dark' : 'from-accent to-accent-dark'} rounded-full flex items-center justify-center shadow-lg`}>
-                    <CheckCircle2 className="w-5 h-5 text-white" />
-                  </div>
-                  <div className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-primary-200">
-                    <h4 className="text-lg font-semibold text-dark">{achievement}</h4>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Client Logos */}
-      <section className="py-24 bg-gradient-to-br from-accent-50 via-white to-primary-50">
-        <div className="container mx-auto px-4">
-          <motion.div {...fadeIn} className="text-center max-w-3xl mx-auto mb-16">
-            <span className="inline-block px-4 py-2 bg-primary-100 text-primary font-semibold rounded-full text-sm mb-4">
-              Proudly Partnered With 26+ Companies
-            </span>
-            <h2 className="text-4xl md:text-5xl font-bold text-dark mb-6">
-              Delivering excellence <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">across every project</span>
-            </h2>
-            <p className="text-gray-600 text-lg">
-              Building lasting relationships with government bodies, defense institutions, and private organizations
-            </p>
-          </motion.div>
-
-          <ClientLogos />
-        </div>
-      </section>
 
       {/* CTA Section */}
       <section id="contact" className="py-24 bg-gradient-to-br from-blue-600 via-blue-700 to-teal-500 relative overflow-hidden">

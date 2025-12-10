@@ -97,12 +97,6 @@ export default function Footer() {
                   Smart Security & Automation
                 </Link>
               </li>
-              <li>
-                <Link href="/it-software-development" className="text-gray-300 hover:text-primary transition-all duration-300 hover:translate-x-1 inline-flex items-start gap-2">
-                  <span className="text-primary mt-1">•</span>
-                  IT & Software Development
-                </Link>
-              </li>
             </ul>
           </div>
 

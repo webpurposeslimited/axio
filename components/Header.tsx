@@ -32,7 +32,6 @@ export default function Header() {
             { name: 'Defense & Government Procurement', href: '/procurement-construction#defense-government' },
             { name: 'Turnkey Procurement', href: '/procurement-construction#turnkey' },
             { name: 'Technology Solutions & Indenting', href: '/procurement-construction#technology-solutions' },
-            { name: 'Construction & Infrastructure', href: '/procurement-construction#construction' },
           ]
         },
         {
@@ -45,10 +44,6 @@ export default function Header() {
             { name: 'Smart Access Control', href: '/smart-access-control' },
             { name: 'Smart Homes', href: '/smart-homes' },
           ]
-        },
-        {
-          name: 'IT & Software Development',
-          href: '/it-software-development'
         },
       ]
     },
@@ -64,9 +59,12 @@ export default function Header() {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link href="/" className="flex items-center group">
-            <div className="text-3xl font-bold font-display transition-all duration-300">
-              <span className="text-primary group-hover:text-primary-dark transition-colors">AXIO</span>
-              <span className="text-accent group-hover:text-accent-dark transition-colors"> VENTURES</span>
+            <div className="transition-all duration-300">
+              <div className="text-3xl font-bold font-display">
+                <span className="text-primary group-hover:text-primary-dark transition-colors">AXIO</span>
+                <span className="text-accent group-hover:text-accent-dark transition-colors"> VENTURES</span>
+              </div>
+              <div className="text-xs text-gray-500 tracking-wide">Your Vision, Our Venture</div>
             </div>
           </Link>
 

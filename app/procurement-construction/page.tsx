@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Shield, Target, Zap, TrendingUp, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Shield, Target, Zap, CheckCircle2, ArrowRight } from 'lucide-react';
 
 export default function ProcurementConstruction() {
   const fadeIn = {
@@ -33,13 +33,6 @@ export default function ProcurementConstruction() {
       image: 'https://i0.wp.com/xemoventures.com/wp-content/uploads/2025/05/37c73262993bbda107b9a6cc7b44e3d3-1-scaled.png?fit=720%2C567&ssl=1',
       icon: Zap
     },
-    {
-      title: 'Construction & Infrastructure',
-      description: 'We provide end-to-end procurement and sourcing services for the construction and infrastructure industry, supplying premium materials, machinery, and specialized services essential for project success. Our team understands the time-sensitive and quality-driven demands of infrastructure projects, ensuring that clients receive the best products at competitive prices. From large-scale commercial projects to specialized government initiatives, we support sustainable, compliant, and efficient construction development.',
-      image: 'https://i0.wp.com/xemoventures.com/wp-content/uploads/2025/05/9df8e6fe0e8d9e6fda45e04957d6cb77-1-scaled.png?fit=720%2C656&ssl=1',
-      icon: TrendingUp,
-      reverse: true
-    }
   ];
 
   return (

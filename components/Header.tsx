@@ -59,13 +59,14 @@ export default function Header() {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link href="/" className="flex items-center group">
-            <div className="transition-all duration-300">
-              <div className="text-3xl font-bold font-display">
-                <span className="text-primary group-hover:text-primary-dark transition-colors">AXIO</span>
-                <span className="text-accent group-hover:text-accent-dark transition-colors"> VENTURES</span>
-              </div>
-              <div className="text-xs text-gray-500 tracking-wide">Your Vision, Our Venture</div>
-            </div>
+            <Image
+              src="/images/logo.jpeg"
+              alt="Axio Ventures"
+              width={150}
+              height={60}
+              className="transition-all duration-300 group-hover:scale-105"
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation */}
